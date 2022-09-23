@@ -1,0 +1,79 @@
+@import "../styles/mediaQuery.scss";
+@import "../styles/utils.scss";
+
+.error-wrapper {
+  background: #fff;
+  min-height: 90vh;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include responsive(tab) {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+
+    a {
+      text-decoration: underline;
+      color: blue;
+    }
+  .error {
+    width: 80%;
+    height: 60vh;
+    margin-top: 5rem;
+    background: url("../img/Error.png") no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-clip: padding-box;
+
+
+    @include responsive(tab) {
+      width: 50%;
+      height: 60vh;
+      margin-top: 2rem;
+    }
+
+  }
+}
+
+.button {
+  border-radius: 0.3rem;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  text-transform: uppercase;
+  background: $gray;
+  border: 1px solid $dark-gray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 4;
+
+  @include responsive(tab) {
+    top: 10rem;
+    padding: 1rem 2.5rem;
+    height: 5.5vh;
+  }
+}
+
+.button:hover {
+  background: linear-gradient(to bottom right, $dark-gray, $text-gray 0%, $gray 80%);
+  color: black;
+}
+
+.back-arrow {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
