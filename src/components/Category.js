@@ -21,7 +21,7 @@ const Category = (props) => {
         <div className='img-container'>
         </div>
         <div className='card-text'>
-          {category.value}
+          {category && category.value}
         </div>
       </div>
       <BackButton />
